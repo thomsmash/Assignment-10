@@ -1,0 +1,72 @@
+body{
+	background: #acd3e3;
+}
+
+#container{
+	max-width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, auto);
+	grid-template-areas:
+        "header header"
+        "text text"
+		"button image1"
+		"text2 image2"
+		"footer footer";
+}
+
+footer{
+	width: 100%;
+}
+
+#text{
+	padding: 10px;
+}
+
+#button{
+	background: #5598b2;
+	max-height: 100px;
+	max-width: 200px;
+	margin: 10px;
+	padding: 5px;
+	border: 2px solid #163066;
+	
+}
+
+#image1{
+	max-width: 100%;
+}
+
+#text2{
+	background: #085170;
+	color: #fff;
+	padding: 5px;
+}
+
+#image2{
+	max-width: 100%;
+}
+
+@media screen and (max-width: 600px){
+	#container{
+		margin: 1rem;
+		max-width: 1280px; /* keep */
+		margin: auto; /* keep */
+		display: grid; /* keep */
+		grid-template-columns: repeat(1, auto);
+		grid-template-rows: repeat(7, auto);
+		grid-template-areas:
+			"header"
+			"text"
+			"button"
+			"image1"
+			"text2"
+			"image2"
+			"footer";
+	}
+	
+	header img{
+		display: none;
+	}
+}
